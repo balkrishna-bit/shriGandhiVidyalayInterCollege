@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Sri Gandhi Vidyalay Inter College</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Sri Gandhi Vidyalay Inter College">
+          <div class="logo" aria-hidden="true" style="background:transparent; box-shadow:none;">
+            <img src="assets/images/ChatGPT Image Jul 10, 2026, 04_03_32 PM.png" alt="School logo" style="width:40px; height:40px; display:block; object-fit:contain; border-radius:12px;" />
+          </div>
+
+          <span>Sri Gandhi Vidyalay Inter College</span>
+        </a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+
+        <div class="nav-links" role="navigation" aria-label="Site">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="academics.html" data-nav="academics">Academics</a>
+          <a href="admissions.html" data-nav="admissions">Admissions</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+          <a class="cta" href="admissions.html" aria-label="Apply now">Apply</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-hero" role="main">
+    <div class="container">
+      <div class="breadcrumbs">Home / Contact</div>
+      <h1 class="h1" style="margin-top:0;">Contact Us</h1>
+      <p class="lede">Placeholder contact details + demo message form.</p>
+
+      <section class="section" aria-label="Contact information">
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="font-size:18px; margin-top:0;">School Address</h3>
+            <p style="margin:0; color:var(--muted); font-weight:750;">
+              Sri Gandhi Vidyalay Inter College<br/> 
+              Railway Colony, Below Railway Flyover, Near Gonda Junction, Gonda 271002<br/>
+          
+            </p>
+            <div class="hr"></div>
+            <h3 style="font-size:18px; margin-top:0;">Call / Email</h3>
+            <p style="margin:0; color:var(--muted); font-weight:750;">
+              Phone: +91 9450526713<br/>
+              Email: dwivedirajesh30@gmail.com
+            </p>
+            <div class="hr"></div>
+            <p style="margin:0; color:var(--muted); font-weight:750;">
+              Replace these placeholders with your real contact info.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size:18px; margin-top:0;">Send a Message</h3>
+
+            <form id="contact-form" autocomplete="on">
+              <div class="form-row">
+                <div>
+                  <label for="c-name">Your Name</label>
+                  <input id="c-name" name="name" required placeholder="e.g., Taylor Morgan" />
+                </div>
+                <div>
+                  <label for="c-email">Email</label>
+                  <input id="c-email" name="email" type="email" required placeholder="e.g., taylor@example.com" />
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top:12px;">
+                <div>
+                  <label for="c-subject">Subject</label>
+                  <input id="c-subject" name="subject" required placeholder="e.g., Admissions enquiry" />
+                </div>
+                <div>
+                  <label for="c-phone">Phone (optional)</label>
+                  <input id="c-phone" name="phone" placeholder="e.g., +1 555 987 6543" />
+                </div>
+              </div>
+
+              <div style="margin-top:12px;">
+                <label for="c-message">Message</label>
+                <textarea id="c-message" name="message" required placeholder="Write your message..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Message</button>
+                <button class="btn" type="reset">Reset</button>
+              </div>
+
+              <div class="notice" id="contact-notice" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="gap:10px; font-weight:900;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:3px; background:linear-gradient(135deg, var(--primary), var(--accent));"></span>
+            <span>Sri Gandhi Vidyalay Inter College</span>
+          </div>
+          <small>© <span id="year"></span> Sri Gandhi Vidyalay Inter College. All rights reserved.</small>
+        </div>
+        <div>
+          <small>Address</small>
+          <div style="margin-top:6px; font-weight:800; color:var(--muted);">
+            Sri Gandhi Vidyalay Inter College, Railway Colony, Below Railway Flyover, Near Gonda Junction, Gonda 271002
+          </div>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

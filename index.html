@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shree Gandhi Vidyalay Inter College, Gonda</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="description" content="Shree Gandhi Vidyalay Inter College, Gonda - Learn • Grow • Succeed" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Shree Gandhi Vidyalay Inter College, Gonda Home">
+          <div class="logo" aria-hidden="true" style="background:transparent; box-shadow:none;">
+            <img src="assets/images/ChatGPT Image Jul 10, 2026, 04_03_32 PM.png" alt="School logo" style="width:40px; height:40px; display:block; object-fit:contain; border-radius:12px;" />
+          </div>
+
+          <span>Shree Gandhi Vidyalay Inter College, Gonda</span>
+        </a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span>Menu</span>
+        </button>
+
+        <div class="nav-links" role="navigation" aria-label="Site">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="about.html" data-nav="about">About</a>
+          <a href="academics.html" data-nav="academics">Academics</a>
+          <a href="admissions.html" data-nav="admissions">Admissions</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+          <a class="cta" href="admissions.html" aria-label="Apply now">Apply</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- FIX: keep layout visible; reveal animation requires JS. Inline styles only. -->
+    <style>
+      /* Premium Home (index.html only) */
+      :root{
+        scroll-behavior: smooth;
+        --glass: rgba(255,255,255,.08);
+        --glass-2: rgba(255,255,255,.12);
+        --stroke: rgba(255,255,255,.18);
+        --shadow-soft: 0 18px 60px rgba(2,132,199,.14);
+        --shadow-card: 0 18px 50px rgba(2,132,199,.10);
+      }
+
+      .home-hero{
+        position: relative;
+        width: 100%;
+        padding: 92px 0 46px;
+        overflow: hidden;
+        background: #08121f;
+      }
+
+      .home-hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background-image: url('assets/images/Hero-campus.jpeg');
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.02);
+        filter: saturate(1.05) contrast(1.05);
+      }
+
+      .home-hero::after{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:
+          linear-gradient(90deg, rgba(2,132,199,.72) 0%, rgba(2,132,199,.45) 40%, rgba(2,132,199,.10) 70%, rgba(8,18,31,.72) 100%),
+          radial-gradient(900px 500px at 20% 20%, rgba(34,197,94,.22), transparent 55%),
+          rgba(0,0,0,.35);
+      }
+
+      .home-hero .container{ position: relative; z-index: 2; }
+
+      .hero-wrap{
+        display:grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 22px;
+        align-items: start;
+      }
+
+      @media (max-width: 980px){
+        .home-hero{ padding: 76px 0 34px; }
+        .hero-wrap{ grid-template-columns: 1fr; }
+      }
+
+      .hero-glass{
+        background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06));
+        border: 1px solid rgba(255,255,255,.16);
+        border-radius: 20px;
+        box-shadow: 0 20px 70px rgba(0,0,0,.25);
+        backdrop-filter: blur(14px);
+        padding: 28px;
+      }
+
+      .kicker-hero{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        color: #e6faff;
+        border: 1px solid rgba(255,255,255,.22);
+        background: rgba(14,165,233,.18);
+        font-weight: 900;
+        letter-spacing: .2px;
+      }
+
+      .home-hero h1{
+        color: #fff;
+        font-size: 44px;
+        line-height: 1.08;
+        margin: 16px 0 10px;
+        letter-spacing: -0.7px;
+      }
+      @media (max-width: 520px){ .home-hero h1{ font-size: 32px; } }
+
+      .home-hero .sub{
+        color: rgba(255,255,255,.88);
+        font-weight: 650;
+        max-width: 62ch;
+        margin: 0 0 18px;
+      }
+
+      .hero-actions{ display:flex; gap: 12px; flex-wrap: wrap; }
+
+      .btn.btn-primary{
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        border-color: transparent;
+        box-shadow: 0 14px 30px rgba(2,132,199,.35);
+      }
+
+      .btn.hero-btn{
+        background: rgba(255,255,255,.10);
+        border: 1px solid rgba(255,255,255,.22);
+        color: #fff;
+        backdrop-filter: blur(10px);
+      }
+      .btn.hero-btn:hover{ background: rgba(255,255,255,.16); }
+
+      .hero-feature-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 16px;
+      }
+      @media (max-width: 520px){ .hero-feature-grid{ grid-template-columns: 1fr; } }
+
+      .feature-card{
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,.18);
+        background: rgba(255,255,255,.06);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 18px 50px rgba(0,0,0,.14);
+        transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+      }
+
+      .feature-card:hover{
+        transform: translateY(-6px);
+        background: rgba(255,255,255,.09);
+        box-shadow: 0 26px 70px rgba(0,0,0,.22);
+      }
+
+      .feature-icon{
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        display:grid;
+        place-items:center;
+        border: 1px solid rgba(255,255,255,.20);
+        background: rgba(255,255,255,.10);
+        margin-bottom: 10px;
+      }
+
+      .feature-card b{ display:block; color:#fff; font-size: 15px; margin-bottom: 6px; }
+      .feature-card span{ color: rgba(255,255,255,.82); font-weight: 650; display:block; }
+
+      /* Campus explore */
+      .home-section{ padding: 44px 0; }
+      .section-title-premium{
+        font-size: 26px;
+        letter-spacing: -.4px;
+        margin: 0 0 10px;
+      }
+
+      .section-lede-premium{
+        color: var(--muted);
+        font-weight: 650;
+        max-width: 68ch;
+        margin: 0 0 24px;
+      }
+
+      .gallery-grid{
+        display:grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 14px;
+      }
+      @media (max-width: 980px){ .gallery-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+      @media (max-width: 520px){ .gallery-grid{ grid-template-columns: 1fr; } }
+
+      .gallery-card{
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+        border: 1px solid rgba(2,132,199,.14);
+        background: rgba(255,255,255,.70);
+        transform: translateZ(0);
+        transition: transform .45s ease, box-shadow .45s ease;
+      }
+
+      .gallery-card:hover{
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 30px 80px rgba(2,132,199,.22);
+      }
+
+.gallery-card img{
+        width:100%;
+        height: 240px;
+        object-fit: cover;
+        object-position: center;
+        display:block;
+        transform: scale(1.02);
+        transition: transform .6s ease;
+      }
+      .gallery-card:hover img{ transform: scale(1.10); }
+
+      /* Slightly larger than original (10–15%) */
+      @media (min-width: 900px){
+        .gallery-card img{ height: 270px; }
+      }
+
+      .gallery-caption{
+        position:absolute;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(8,18,31,.55);
+        border: 1px solid rgba(255,255,255,.18);
+        backdrop-filter: blur(12px);
+        color: rgba(255,255,255,.92);
+        font-weight: 750;
+        font-size: 13px;
+      }
+
+      .gallery-actions{ margin-top: 18px; display:flex; justify-content:center; }
+      .btn-gallery{
+        background: rgba(255,255,255,.75);
+        border: 1px solid rgba(2,132,199,.18);
+        box-shadow: 0 18px 50px rgba(2,132,199,.10);
+      }
+      .btn-gallery:hover{ background: rgba(14,165,233,.08); }
+
+      /* Premium feature tiles (existing Featured sections links) */
+      .featured-links-wrap{ margin-top: 10px; }
+      .grid-3-premium{
+        display:grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 14px;
+      }
+      @media (max-width: 980px){ .grid-3-premium{ grid-template-columns: 1fr; } }
+
+      .featured-card{
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid rgba(2,132,199,.16);
+        background: rgba(255,255,255,.70);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 18px 55px rgba(2,132,199,.10);
+        transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+        position: relative;
+        overflow:hidden;
+      }
+
+      .featured-card::before{
+        content:"";
+        position:absolute;
+        inset:-60px;
+        background: radial-gradient(circle at 30% 20%, rgba(14,165,233,.25), transparent 55%),
+                    radial-gradient(circle at 70% 70%, rgba(34,197,94,.18), transparent 60%);
+        opacity:.55;
+        transition: opacity .35s ease;
+      }
+
+      .featured-card:hover{ transform: translateY(-8px); box-shadow: 0 30px 90px rgba(2,132,199,.18); background: rgba(255,255,255,.82);} 
+      .featured-card:hover::before{ opacity: .85; }
+
+      .featured-card > *{ position: relative; z-index: 2; }
+
+      .featured-icon{
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        display:grid;
+        place-items:center;
+        background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(34,197,94,.12));
+        border: 1px solid rgba(14,165,233,.22);
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      .featured-card h3{ margin: 0 0 6px; font-size: 16px; letter-spacing: -.2px; }
+      .featured-card p{ margin: 0; color: var(--muted); font-weight: 650; }
+
+      /* Statistics */
+      .stats-premium{
+        display:grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        gap: 14px;
+        margin-top: 14px;
+      }
+      @media (max-width: 980px){ .stats-premium{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+      @media (max-width: 520px){ .stats-premium{ grid-template-columns: 1fr; } }
+
+      .stat-premium{
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid rgba(2,132,199,.14);
+        background: rgba(255,255,255,.72);
+        box-shadow: 0 18px 55px rgba(2,132,199,.10);
+        position: relative;
+        overflow:hidden;
+        transition: transform .35s ease;
+      }
+      .stat-premium:hover{ transform: translateY(-6px); }
+
+      .stat-premium b{ display:block; font-size: 14px; color: var(--text); margin-bottom: 8px; }
+      .stat-premium span{ display:block; color: var(--muted); font-weight: 700; }
+
+      .stat-glow{
+        position:absolute;
+        inset:-40px;
+        background: radial-gradient(circle at 20% 20%, rgba(14,165,233,.22), transparent 55%),
+                    radial-gradient(circle at 70% 60%, rgba(34,197,94,.18), transparent 60%);
+        opacity:.55;
+        pointer-events:none;
+      }
+
+      .stat-premium > *{ position: relative; z-index: 2; }
+
+      /* Scroll animations */
+.reveal{ opacity: 1 !important; transform: none !important; transition: none !important; }
+      .reveal.is-visible{ opacity: 1; transform: none; }
+    </style>
+
+    <section class="home-hero" aria-label="Home hero banner">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="hero-glass reveal" data-reveal>
+            <div class="kicker-hero">Learn • Grow • Succeed</div>
+            <h1>A school built for curiosity and character.</h1>
+            <p class="sub">
+              Welcome to <b>Shree Gandhi Vidyalay Inter College</b>—a welcoming community where every student is supported to learn deeply,
+              grow confidently, and succeed in life.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="admissions.html">Request Admission</a>
+              <a class="btn hero-btn" href="about.html">Meet Our School</a>
+            </div>
+
+            <div class="hero-feature-grid" aria-label="Highlights">
+              <div class="feature-card reveal" data-reveal>
+                <div class="feature-icon" aria-hidden="true">👥</div>
+                <b>Small classes</b>
+                <span>More attention, better learning.</span>
+              </div>
+              <div class="feature-card reveal" data-reveal>
+                <div class="feature-icon" aria-hidden="true">🎓</div>
+                <b>All-round education</b>
+                <span>Academics + sports + arts.</span>
+              </div>
+              <div class="feature-card reveal" data-reveal>
+                <div class="feature-icon" aria-hidden="true">🧑‍🏫</div>
+                <b>Supportive teachers</b>
+                <span>Guidance from day one.</span>
+              </div>
+              <div class="feature-card reveal" data-reveal>
+                <div class="feature-icon" aria-hidden="true">🏛️</div>
+                <b>Modern facilities</b>
+                <span>Safe & student-friendly spaces.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal" data-reveal aria-hidden="true" style="display:grid; gap:14px; align-content:start;">
+            <div class="card" style="padding:0; overflow:hidden; border-radius:20px; border:1px solid rgba(255,255,255,.20); background:rgba(255,255,255,.06); backdrop-filter: blur(14px); box-shadow: 0 24px 80px rgba(0,0,0,.25);">
+              <div style="position:relative;">
+                <img
+                  src="assets/images/Screenshot 2026-07-05 130047.png"
+                  alt="Campus highlight"
+                  style="width:100%; height: 340px; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.03);"
+                />
+                <div style="position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.55));"></div>
+                <div style="position:absolute; left:16px; right:16px; bottom:16px; padding: 14px 14px; border-radius: 16px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px);">
+                  <div style="color: rgba(255,255,255,.92); font-weight: 900;">A campus designed for growth</div>
+                  <div style="color: rgba(255,255,255,.82); font-weight: 700; margin-top:6px; font-size: 13px;">Discover classrooms, heritage spaces, and student-centered learning.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" aria-label="Explore our campus">
+      <div class="container">
+        <h2 class="section-title-premium reveal" data-reveal>Explore Our Campus</h2>
+        <p class="section-lede-premium reveal" data-reveal>
+          Walk through our learning spaces—modern facilities, heritage moments, and open grounds that inspire students every day.
+        </p>
+
+        <div class="gallery-grid" aria-label="Campus gallery">
+          <figure class="gallery-card reveal" data-reveal>
+            <img src="assets/images/school-gate.jpeg" alt="School gate" />
+            <figcaption class="gallery-caption">School Gate</figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-reveal>
+            <img src="assets/images/main-campus.jpeg" alt="Main campus" />
+            <figcaption class="gallery-caption">Main Campus</figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-reveal>
+            <img src="assets/images/heritage-building.jpeg" alt="Heritage building" />
+            <figcaption class="gallery-caption">Heritage Building</figcaption>
+          </figure>
+          <figure class="gallery-card reveal" data-reveal>
+            <img src="assets/images/Screenshot 2026-07-05 130047.png" alt="Campus ground" />
+            <figcaption class="gallery-caption">Campus Ground</figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery-actions">
+          <!-- FIX: keep homepage button location/label, but open gallery modal instead of navigating -->
+          <button type="button" class="btn btn-gallery reveal" data-reveal id="viewGalleryBtn" aria-haspopup="dialog" aria-controls="galleryModal">
+            View Gallery
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" aria-label="Featured sections">
+      <div class="container">
+        <div class="featured-links-wrap">
+          <div class="grid-3-premium" aria-label="Quick links">
+            <a class="featured-card reveal" data-reveal href="about.html">
+              <div class="featured-icon" aria-hidden="true">🏫</div>
+              <h3>About Our School</h3>
+              <p>Mission, values, and what makes us unique.</p>
+            </a>
+            <a class="featured-card reveal" data-reveal href="academics.html">
+              <div class="featured-icon" aria-hidden="true">📚</div>
+              <h3>Academics</h3>
+              <p>Programs and learning approach for every grade.</p>
+            </a>
+            <a class="featured-card reveal" data-reveal href="admissions.html">
+              <div class="featured-icon" aria-hidden="true">📝</div>
+              <h3>Admissions</h3>
+              <p>Easy process + quick enquiry form.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="stats-premium reveal" data-reveal>
+          <div class="stat-premium">
+            <span class="stat-glow" aria-hidden="true"></span>
+            <b>Established in 1946</b>
+            <span>Trust built over decades of learning.</span>
+          </div>
+          <div class="stat-premium">
+            <span class="stat-glow" aria-hidden="true"></span>
+            <b>Primary to Intermediate</b>
+            <span>From foundational learning to growth.</span>
+          </div>
+          <div class="stat-premium">
+            <span class="stat-glow" aria-hidden="true"></span>
+            <b>Science, Humanities &amp; Vocational</b>
+            <span>Pathways for every student’s future.</span>
+          </div>
+          <div class="stat-premium">
+            <span class="stat-glow" aria-hidden="true"></span>
+            <b>Dedicated Faculty</b>
+            <span>Guidance that helps students thrive.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="gap:10px; font-weight:900;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:3px; background:linear-gradient(135deg, var(--primary), var(--accent));"></span>
+            <span>Sri Gandhi Vidyalay Inter College</span>
+          </div>
+          <small>© <span id="year"></span> Sri Gandhii Vidyalay Inter College. All rights reserved.</small>
+        </div>
+        <div>
+          <small>Address</small>
+          <div style="margin-top:6px; font-weight:800; color:var(--muted);">
+            Sri Gandhi Vidyalay Inter College, Railway Colony, Below Railway Flyover, Near Gonda Junction, Gonda 271002
+          </div>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="admissions.html">Admissions</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+
+  <!-- Gallery Modal (no page navigation; no manual image listing) -->
+  <script>
+    (function () {
+      const root = document.documentElement;
+
+      const modalHtml = `
+        <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Campus gallery" tabindex="-1">
+          <div class="gallery-modal-backdrop" data-close-modal="1" aria-hidden="true"></div>
+
+          <div class="gallery-modal-panel" role="document">
+            <button class="gallery-modal-close" type="button" aria-label="Close" data-close-modal="1">✕</button>
+
+            <div class="gallery-modal-topbar" aria-hidden="true">
+              <button class="gallery-modal-nav" type="button" aria-label="Previous" data-gallery-prev>‹</button>
+              <div class="gallery-modal-spacer"></div>
+              <button class="gallery-modal-nav" type="button" aria-label="Next" data-gallery-next>›</button>
+            </div>
+
+            <div class="gallery-lightbox" aria-live="polite">
+              <button class="gallery-lightbox-close" type="button" aria-label="Close lightbox" data-close-lightbox>✕</button>
+
+              <div class="gallery-lightbox-stage">
+                <button class="gallery-lightbox-nav prev" type="button" aria-label="Previous image" data-lightbox-prev>‹</button>
+                <img class="gallery-lightbox-img" alt="" />
+                <button class="gallery-lightbox-nav next" type="button" aria-label="Next image" data-lightbox-next>›</button>
+              </div>
+
+              <div class="gallery-lightbox-caption" aria-hidden="true"></div>
+            </div>
+
+            <div class="gallery-modal-grid-wrap" aria-label="Gallery images">
+              <div class="gallery-modal-grid" id="galleryModalGrid"></div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Insert modal once
+      if (!document.getElementById('galleryModal')) {
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+      }
+
+      const modal = document.getElementById('galleryModal');
+      const grid = document.getElementById('galleryModalGrid');
+      const viewBtn = document.getElementById('viewGalleryBtn');
+
+      const CLOSE_ATTR = '[data-close-modal]';
+      const LIGHTBOX_CLOSE_ATTR = '[data-close-lightbox]';
+
+      const lockScroll = () => {
+        // prevent background scrolling
+        document.body.style.overflow = 'hidden';
+      };
+      const unlockScroll = () => {
+        document.body.style.overflow = '';
+      };
+
+      const getAllImageUrls = async () => {
+        // Prefer PHP endpoint that scans assets/images directory dynamically.
+        // This avoids any manual listing of image names in JS.
+        try {
+          const res = await fetch('./gallery-images.php', { credentials: 'same-origin' });
+          if (res.ok) {
+            const data = await res.json();
+            if (Array.isArray(data)) return data.filter(Boolean);
+          }
+        } catch (e) {
+          // Ignore; fallback below.
+        }
+
+        // Fallback (will only include images already referenced on the page)
+        const imgs = Array.from(document.images);
+        const urls = imgs
+          .map(img => img.getAttribute('src'))
+          .filter(Boolean)
+          .filter(src => src.startsWith('assets/images/'));
+
+        return Array.from(new Set(urls));
+      };
+
+      // Build thumbnails grid
+      const state = {
+        images: [],
+        lightboxIndex: 0,
+        lightboxOpen: false
+      };
+
+      const openModal = async () => {
+        modal.classList.add('open');
+        lockScroll();
+        await renderGrid();
+        // focus close for accessibility
+        const closeBtn = modal.querySelector('[data-close-modal]');
+        closeBtn && closeBtn.focus();
+      };
+
+      const closeModal = () => {
+        hideLightbox();
+        modal.classList.remove('open');
+        unlockScroll();
+      };
+
+      const showLightboxAt = (index) => {
+        if (!state.images.length) return;
+        state.lightboxIndex = (index + state.images.length) % state.images.length;
+        const imgUrl = state.images[state.lightboxIndex];
+        const img = modal.querySelector('.gallery-lightbox-img');
+        const caption = modal.querySelector('.gallery-lightbox-caption');
+
+        // Display image only (no filename/caption text)
+        img.src = imgUrl;
+        img.alt = '';
+        if (caption) caption.textContent = '';
+
+        modal.classList.add('lightbox-open');
+        state.lightboxOpen = true;
+      };
+
+      const hideLightbox = () => {
+        modal.classList.remove('lightbox-open');
+        state.lightboxOpen = false;
+      };
+
+      const renderGrid = async () => {
+        // Only render once; keep fast.
+        if (state.images.length && grid.children.length) return;
+
+        const urls = await getAllImageUrls();
+        // Prefer unique URLs only.
+        state.images = Array.isArray(urls) ? urls : [];
+
+        grid.innerHTML = '';
+
+
+        state.images.forEach((src, idx) => {
+          const fig = document.createElement('figure');
+          fig.className = 'gallery-thumb';
+
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = src.split('/').pop() || `Image ${idx + 1}`;
+          img.loading = 'lazy';
+
+          fig.appendChild(img);
+
+          fig.addEventListener('click', () => {
+            showLightboxAt(idx);
+          });
+
+          grid.appendChild(fig);
+        });
+      };
+
+      // Events
+      viewBtn && viewBtn.addEventListener('click', openModal);
+
+      modal.addEventListener('click', (e) => {
+        // Close when clicking outside panel (backdrop)
+        const target = e.target;
+        if (target && target.matches(CLOSE_ATTR)) {
+          closeModal();
+          return;
+        }
+        if (target && target.matches(LIGHTBOX_CLOSE_ATTR)) {
+          hideLightbox();
+          return;
+        }
+      });
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('open')) return;
+        if (e.key === 'Escape') {
+          if (state.lightboxOpen) hideLightbox();
+          else closeModal();
+        }
+
+        if (state.lightboxOpen) {
+          if (e.key === 'ArrowLeft') showLightboxAt(state.lightboxIndex - 1);
+          if (e.key === 'ArrowRight') showLightboxAt(state.lightboxIndex + 1);
+        }
+      });
+
+      // Lightbox navigation buttons
+      modal.addEventListener('click', (e) => {
+        const prevBtn = e.target && e.target.closest('[data-lightbox-prev]');
+        const nextBtn = e.target && e.target.closest('[data-lightbox-next]');
+        if (!prevBtn && !nextBtn) return;
+
+        if (prevBtn) showLightboxAt(state.lightboxIndex - 1);
+        if (nextBtn) showLightboxAt(state.lightboxIndex + 1);
+      });
+
+      // Inject required modal CSS (kept inside index.html to avoid changing other pages)
+      const style = document.createElement('style');
+      style.textContent = `
+        /* Gallery modal styles */
+        .gallery-modal{
+          position: fixed;
+          inset: 0;
+          display: none;
+          place-items: center;
+          z-index: 2000;
+          padding: 18px;
+        }
+        .gallery-modal.open{ display: grid; }
+        .gallery-modal-backdrop{
+          position:absolute;
+          inset:0;
+          background: rgba(3, 7, 18, .58);
+          backdrop-filter: blur(10px);
+          opacity:0;
+          animation: modalFadeIn .2s ease forwards;
+        }
+
+        .gallery-modal-panel{
+          position:relative;
+          width: min(1100px, 100%);
+          max-height: min(92vh, 820px);
+          overflow: hidden;
+          border-radius: 22px;
+          background: rgba(255,255,255,.10);
+          border: 1px solid rgba(255,255,255,.18);
+          box-shadow: 0 30px 120px rgba(0,0,0,.45);
+          transform: translateY(10px) scale(.98);
+          opacity: 0;
+          animation: modalZoomIn .28s ease forwards;
+        }
+
+        @keyframes modalFadeIn{ to{ opacity: 1; } }
+        @keyframes modalZoomIn{ to{ opacity:1; transform: translateY(0) scale(1);} }
+
+        /* Modal close */
+        .gallery-modal-close{
+          position:absolute;
+          top: 12px;
+          right: 12px;
+          width: 42px;
+          height: 42px;
+          border-radius: 14px;
+          border: 1px solid rgba(255,255,255,.20);
+          background: rgba(255,255,255,.10);
+          color: rgba(255,255,255,.95);
+          cursor:pointer;
+          font-size: 18px;
+          font-weight: 900;
+          backdrop-filter: blur(10px);
+          transition: transform .2s ease, background .2s ease;
+          z-index: 2;
+        }
+        .gallery-modal-close:hover{ background: rgba(255,255,255,.16); transform: translateY(-1px); }
+
+        /* Grid */
+        .gallery-modal-grid-wrap{
+          padding: 18px;
+          overflow:auto;
+          max-height: min(92vh, 820px);
+        }
+        .gallery-modal-grid{
+          display:grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 14px;
+        }
+        @media (max-width: 980px){ .gallery-modal-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 620px){ .gallery-modal-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+        .gallery-thumb{
+          margin:0;
+          cursor:pointer;
+          border-radius: 18px;
+          overflow:hidden;
+          border: 1px solid rgba(255,255,255,.18);
+          background: rgba(255,255,255,.06);
+          box-shadow: 0 14px 55px rgba(2,132,199,.10);
+          transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+        }
+        .gallery-thumb:hover{
+          transform: translateY(-4px) scale(1.01);
+          box-shadow: 0 20px 75px rgba(2,132,199,.18);
+          background: rgba(255,255,255,.10);
+        }
+
+        .gallery-thumb img{
+          width:100%;
+          height: auto;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          object-position: center;
+          display:block;
+        }
+        /* Hide captions in grid (requirement: display image only) */
+        .gallery-thumb figcaption{ display:none !important; }
+
+        /* Lightbox overlay inside modal */
+        .gallery-lightbox{
+          position:absolute;
+          inset:0;
+          display:none;
+          padding: 18px;
+          background: rgba(2, 6, 23, .35);
+          backdrop-filter: blur(12px);
+          z-index: 3;
+          animation: fadeIn .2s ease;
+        }
+        .gallery-modal.lightbox-open .gallery-lightbox{ display:flex; flex-direction:column; }
+
+        @keyframes fadeIn{ from{ opacity:0 } to{ opacity:1 } }
+
+        .gallery-lightbox-stage{
+          flex: 1;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          position: relative;
+          min-height: 240px;
+        }
+
+        .gallery-lightbox-img{
+          max-width: 100%;
+          max-height: 75vh;
+          width: auto;
+          height: auto;
+          border-radius: 20px;
+          box-shadow: 0 35px 130px rgba(0,0,0,.55);
+          border: 1px solid rgba(255,255,255,.18);
+          transform: scale(.98);
+          animation: lightboxZoom .24s ease forwards;
+        }
+        @keyframes lightboxZoom{ to{ transform: scale(1); } }
+
+        .gallery-lightbox-caption{
+          padding: 10px 16px;
+          margin-top: 10px;
+          border-radius: 16px;
+          background: rgba(255,255,255,.10);
+          border: 1px solid rgba(255,255,255,.18);
+          color: rgba(255,255,255,.95);
+          font-weight: 900;
+          text-align:center;
+          overflow:hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .gallery-lightbox-close{
+          position:absolute;
+          top: 12px;
+          right: 12px;
+          width: 42px;
+          height: 42px;
+          border-radius: 14px;
+          border: 1px solid rgba(255,255,255,.20);
+          background: rgba(255,255,255,.10);
+          color: rgba(255,255,255,.95);
+          cursor:pointer;
+          font-size: 18px;
+          font-weight: 900;
+          backdrop-filter: blur(10px);
+          transition: transform .2s ease, background .2s ease;
+          z-index: 4;
+        }
+        .gallery-lightbox-close:hover{ background: rgba(255,255,255,.16); transform: translateY(-1px); }
+
+        .gallery-lightbox-nav{
+          position:absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 48px;
+          height: 48px;
+          border-radius: 16px;
+          border: 1px solid rgba(255,255,255,.20);
+          background: rgba(255,255,255,.10);
+          color: rgba(255,255,255,.95);
+          cursor:pointer;
+          font-size: 22px;
+          font-weight: 900;
+          backdrop-filter: blur(10px);
+          transition: transform .2s ease, background .2s ease;
+        }
+        .gallery-lightbox-nav:hover{ background: rgba(255,255,255,.16); transform: translateY(-50%) scale(1.02); }
+        .gallery-lightbox-nav.prev{ left: 10px; }
+        .gallery-lightbox-nav.next{ right: 10px; }
+
+        /* Ensure panel is clickable */
+        .gallery-modal-panel{ position: relative; }
+
+        /* Prevent grid from being scrollable when lightbox is open */
+        .gallery-modal.lightbox-open .gallery-modal-grid-wrap{ overflow:hidden; }
+      `;
+      document.head.appendChild(style);
+    })();
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
