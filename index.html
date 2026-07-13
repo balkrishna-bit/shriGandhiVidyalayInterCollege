@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shri Gandhi Vidyalay Inter College, Gonda</title>
+  <title>Shree Gandhi Vidyalay Inter College, Gonda</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
   <meta name="description" content="Shree Gandhi Vidyalay Inter College, Gonda - Learn • Grow • Succeed" />
 </head>
@@ -18,7 +18,7 @@
             <img src="assets/images/ChatGPT Image Jul 10, 2026, 04_03_32 PM.png" alt="School logo" style="width:40px; height:40px; display:block; object-fit:contain; border-radius:12px;" />
           </div>
 
-          <span>Shri Gandhi Vidyalay Inter College, Gonda</span>
+          <span>Shree Gandhi Vidyalay Inter College, Gonda</span>
         </a>
 
         <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
@@ -353,6 +353,134 @@
       /* Scroll animations */
 .reveal{ opacity: 1 !important; transform: none !important; transition: none !important; }
       .reveal.is-visible{ opacity: 1; transform: none; }
+
+      /* School Events & Achievements Carousel (index.html only) */
+      .events-title{
+        font-size: 26px;
+        letter-spacing: -.4px;
+        margin: 0 0 18px;
+        color: var(--text);
+      }
+
+      .events-slider{
+        width: 90%;
+        margin: 0 auto;
+        height: 420px;
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(2,132,199,.14);
+        background: rgba(255,255,255,.65);
+        transform: translateZ(0);
+      }
+
+      .events-viewport{ height: 100%; width: 100%; }
+
+      .events-track{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.6s ease;
+      }
+
+      .events-slide{
+        min-width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .events-slide .events-bg{
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        object-position: center;
+        filter: blur(20px);
+        opacity: .40;
+        transform: scale(1.08);
+      }
+
+      .events-slide .events-overlay{
+        position:absolute;
+        inset:0;
+        background: rgba(2,6,23,.18);
+        z-index: 1;
+      }
+
+      .events-slide .events-img{
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
+        object-fit: contain;
+        object-position: center;
+        display:block;
+        margin: 0 auto;
+        z-index: 2;
+        padding: 14px;
+      }
+
+      .events-arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,.20);
+        background: rgba(255,255,255,.10);
+        backdrop-filter: blur(10px);
+        color: rgba(255,255,255,.98);
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        font-size: 24px;
+        font-weight: 900;
+        transition: transform .2s ease, background .2s ease;
+        user-select: none;
+      }
+
+      .events-arrow:hover{ transform: translateY(-50%) scale(1.05); background: rgba(255,255,255,.16); }
+      .events-arrow:active{ transform: translateY(-50%) scale(0.98); }
+
+      .events-prev{ left: 14px; }
+      .events-next{ right: 14px; }
+
+      .events-dots{
+        width: 90%;
+        margin: 14px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .events-dot{
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(2,132,199,.18);
+        border: 1px solid rgba(2,132,199,.20);
+        cursor: pointer;
+        transition: transform .2s ease, background .2s ease, width .2s ease;
+      }
+
+      .events-dot[aria-current="true"]{
+        width: 26px;
+        background: rgba(14,165,233,.55);
+        border-color: rgba(14,165,233,.55);
+      }
+
+      @media (max-width: 980px){
+        .events-slider{ height: 340px; }
+      }
+      @media (max-width: 520px){
+        .events-slider{ width: 100%; height: 280px; border-radius: 14px; }
+        .events-dots{ width: 100%; }
+      }
     </style>
 
     <section class="home-hero" aria-label="Home hero banner">
@@ -362,7 +490,7 @@
             <div class="kicker-hero">Learn • Grow • Succeed</div>
             <h1>A school built for curiosity and character.</h1>
             <p class="sub">
-              Welcome to <b>Shri Gandhi Vidyalay Inter College</b>—a welcoming community where every student is supported to learn deeply,
+              Welcome to <b>Shree Gandhi Vidyalay Inter College</b>—a welcoming community where every student is supported to learn deeply,
               grow confidently, and succeed in life.
             </p>
 
@@ -450,6 +578,31 @@
       </div>
     </section>
 
+    <section class="home-section" aria-label="School Events & Achievements">
+      <div class="container">
+        <h2 class="events-title reveal" data-reveal>School Events &amp; Achievements</h2>
+
+        <div class="events-slider reveal" data-reveal id="eventsSlider" aria-roledescription="carousel">
+          <div class="events-viewport">
+            <div class="events-track" id="eventsTrack">
+              <div class="events-slide"><img class="events-bg" src="assets/events/event1.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event1.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event2.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event2.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event3.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event3.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event4.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event4.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event5.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event5.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event6.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event6.jpeg" alt="" loading="lazy" /></div>
+              <div class="events-slide"><img class="events-bg" src="assets/events/event7.jpeg" alt="" loading="lazy" /><div class="events-overlay" aria-hidden="true"></div><img class="events-img" src="assets/events/event7.jpeg" alt="" loading="lazy" /></div>
+            </div>
+          </div>
+
+          <button class="events-arrow events-prev" type="button" aria-label="Previous slide" id="eventsPrev">‹</button>
+          <button class="events-arrow events-next" type="button" aria-label="Next slide" id="eventsNext">›</button>
+
+          <div class="events-dots" id="eventsDots" role="tablist" aria-label="Slide navigation"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="home-section" aria-label="Featured sections">
       <div class="container">
         <div class="featured-links-wrap">
@@ -504,9 +657,9 @@
         <div>
           <div class="brand" style="gap:10px; font-weight:900;">
             <span style="display:inline-block; width:10px; height:10px; border-radius:3px; background:linear-gradient(135deg, var(--primary), var(--accent));"></span>
-            <span>Shri Gandhi Vidyalay Inter College</span>
+            <span>Sri Gandhi Vidyalay Inter College</span>
           </div>
-          <small>© <span id="year"></span> Shri Gandhi Vidyalay Inter College. All rights reserved.</small>
+          <small>© <span id="year"></span> Sri Gandhii Vidyalay Inter College. All rights reserved.</small>
         </div>
         <div>
           <small>Address</small>
@@ -525,6 +678,90 @@
   </footer>
 
   <script src="assets/js/app.js"></script>
+
+  <script>
+    (function(){
+      const slider = document.getElementById('eventsSlider');
+      if(!slider) return;
+
+      const track = document.getElementById('eventsTrack');
+      const prevBtn = document.getElementById('eventsPrev');
+      const nextBtn = document.getElementById('eventsNext');
+      const dotsWrap = document.getElementById('eventsDots');
+
+      const slides = Array.from(track ? track.children : []);
+      const total = slides.length;
+      if(!track || !total) return;
+
+      let index = 0;
+      let timer = null;
+      const intervalMs = 4000;
+
+      const setIndex = (nextIndex, {updateDots=true} = {}) => {
+        index = (nextIndex + total) % total;
+        track.style.transform = `translateX(${-index * 100}%)`;
+        if(updateDots) updateDotsUI();
+      };
+
+      const updateDotsUI = () => {
+        const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
+        dots.forEach((d, i) => {
+          const isCurrent = i === index;
+          d.setAttribute('aria-current', String(isCurrent));
+        });
+      };
+
+      const buildDots = () => {
+        if(!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        for(let i=0;i<total;i++){
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'events-dot';
+          btn.setAttribute('role','tab');
+          btn.setAttribute('aria-label', `Go to slide ${i+1}`);
+          btn.setAttribute('aria-current', i === 0 ? 'true' : 'false');
+          btn.addEventListener('click', () => {
+            stopAuto();
+            setIndex(i);
+            startAuto();
+          });
+          dotsWrap.appendChild(btn);
+        }
+      };
+
+      const next = () => setIndex(index + 1);
+      const prev = () => setIndex(index - 1);
+
+      const startAuto = () => {
+        if(timer) return;
+        timer = window.setInterval(() => {
+          next();
+        }, intervalMs);
+      };
+
+      const stopAuto = () => {
+        if(timer){
+          window.clearInterval(timer);
+          timer = null;
+        }
+      };
+
+      buildDots();
+      updateDotsUI();
+      setIndex(0, {updateDots:false});
+
+      prevBtn && prevBtn.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+      nextBtn && nextBtn.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+
+      // Pause auto-slide on hover
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+
+      // Initialize
+      startAuto();
+    })();
+  </script>
 
   <!-- Gallery Modal (no page navigation; no manual image listing) -->
   <script>
@@ -584,26 +821,55 @@
       };
 
       const getAllImageUrls = async () => {
-        // Prefer PHP endpoint that scans assets/images directory dynamically.
-        // This avoids any manual listing of image names in JS.
+        // Combine images from BOTH:
+        //  - /assets/images/  (existing campus gallery)
+        //  - /assets/events/  (add school events + achievements)
+        //  - /assets/gallery/ (if folder exists; contains additional campus images)
+        // NOTE: This keeps existing gallery design/functionality and only extends the image set.
+
+        const uniq = new Set();
+
+        // 1) Campus images from existing PHP endpoint (/assets/images)
         try {
           const res = await fetch('./gallery-images.php', { credentials: 'same-origin' });
           if (res.ok) {
             const data = await res.json();
-            if (Array.isArray(data)) return data.filter(Boolean);
+            if (Array.isArray(data)) data.filter(Boolean).forEach(u => uniq.add(u));
           }
         } catch (e) {
           // Ignore; fallback below.
         }
 
-        // Fallback (will only include images already referenced on the page)
+        // 2) Events images (we know there are static assets/events/event*.jpeg in this project)
+        //    Avoid showing filenames anywhere; only URLs are used.
+        for (let i = 1; i <= 7; i++) {
+          uniq.add(`assets/events/event${i}.jpeg`);
+        }
+
+        // 3) Optional: /assets/gallery/ images, if any exist.
+        //    If there is no server support to list them, we fall back to detecting already-loaded images.
+        try {
+          // If there’s a gallery endpoint present, prefer it.
+          // (No changes required to existing pages if endpoint doesn’t exist.)
+          const res2 = await fetch('./gallery-images.php', { credentials: 'same-origin' });
+          if (res2.ok) {
+            const data2 = await res2.json();
+            // gallery-images.php returns assets/images only, so we won't add anything new here.
+            // This block is intentionally minimal to avoid breaking existing popup.
+          }
+        } catch (e) {
+          // Ignore.
+        }
+
+        // Fallback: include any images already referenced on the page (keeps existing behavior)
         const imgs = Array.from(document.images);
-        const urls = imgs
+        imgs
           .map(img => img.getAttribute('src'))
           .filter(Boolean)
-          .filter(src => src.startsWith('assets/images/'));
+          .filter(src => src.startsWith('assets/images/') || src.startsWith('assets/gallery/') || src.startsWith('assets/events/'))
+          .forEach(u => uniq.add(u));
 
-        return Array.from(new Set(urls));
+        return Array.from(uniq);
       };
 
       // Build thumbnails grid
@@ -657,8 +923,15 @@
         // Prefer unique URLs only.
         state.images = Array.isArray(urls) ? urls : [];
 
-        grid.innerHTML = '';
+        // Hard guarantee: include ALL events images (event1..event7)
+        // without changing any existing gallery/campus images logic.
+        for (let i = 1; i <= 7; i++) {
+          state.images.push(`assets/events/event${i}.jpeg`);
+        }
 
+        state.images = Array.from(new Set(state.images));
+
+        grid.innerHTML = '';
 
         state.images.forEach((src, idx) => {
           const fig = document.createElement('figure');
